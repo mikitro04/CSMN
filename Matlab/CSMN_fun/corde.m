@@ -1,29 +1,41 @@
-function [x, k] = corde(fun, m, x0, tol, kmax)
-    %controllare se x è già la nostra soluzione
-    if(abs(fun(x0)) < tol)
-        x = x0;
-        return
+function [xc, kc] = corde(f, m, x0, tau, kmax)
+    
+    % corde: metodo per trovare un'approssimazione della radice di 
+    % f(x) = 0 
+    %   [xc, kc] = corde(f, m, x0, tau, kmax) restituisce l'approssimazione
+    %   della radice e il numero di iterazioni effettuate.
+
+    % Controllo che il punto iniziale sia già una radice
+    if(abs(f(x0)) < tau)
+        xc = x0;
+        kc = 1;
+        return;
+    end
+    
+    % Controllo che m non sia tendente a 0
+    if abs(m) < tau
+        error("Valore di m troppo vicino a 0");
     end
 
-    flag = 1;
-    x_new = x0;
-    k = 0;
+    % Inizio algoritmo iterativo da k a kmax
+    for kc = 1 : kmax
 
-    while flag
-        k = k + 1;
-        xk = x_new;
-        fk = fun(xk);
+        % Formula corde
+        xc = x0 - f(x0) / m;
 
-        x_new = xk - (fk/m);
+        % Condizioni di arresto
+        if abs(f(xc)) < tau || abs(xc - x0) < tau * abs(x0)
+            return;
+        end
 
-        flag = (abs(x_new - xk) > abs(xk) * tol) && (k < kmax) && (abs(fun(x_new)) > tol);
+        % Aggiorno variabile
+        x0 = xc;
+
     end
 
-    if(k >= kmax)
-        warning("Raggiunto kmax");
-        x = inf;
-    else
-        x = x_new;
-    end
+    % In caso esca dal ciclo significa che è stato raggiunto il numero
+    % massimo di iterazioni senza che il punto trovato abbia raggiunto una
+    % tolleranza accettabile
+    warning("Iterazioni massime raggiunte");
 
 end

@@ -1,38 +1,50 @@
-function [x, k] = secanti(fun, x0, x1, tol, kmax)
-    % Controlla se x0 è già una soluzione
-    if abs(fun(x0)) < tol
-        x = x0;
-        k = 0;
+function [xs, ks] = secanti(f, x0, x1, tau, kmax)
+
+    % secanti: metodo per trovare un'approssimazione della radice di 
+    % f(x) = 0
+    %   [x, k] = secanti(f, x0, x1, tau, kmax) restituisce l'approssimazione
+    %   della radice e il numero di iterazioni effettuate.
+
+    % Caso base: x0 è già una soluzione
+    if abs(f(x0)) < tau
+        xs = x0;
+        ks = 0;
         return
     end
 
-    k = 0;
-    x_new = x1;
-    flag = true;
 
-    while flag
-        x0 = x1;
-        x1 = x_new;
+    % Inizio algoritmo iterativo da 1 a kmax con passo 1
+    for ks = 1 : kmax
 
-        f0 = fun(x0);
-        f1 = fun(x1);
+        % Controllo che i punti non siano gli stessi
+        if x0 == x1
+            error("Divisione per 0, modifica x0 e x1");
+        end
+        
+        f0 = f(x0);
+        f1 = f(x1);
+        
+        % Formula secanti
         m = (f1 - f0) / (x1 - x0);
+        x_new = x1 - f1 / m;
 
-        if abs(m) < tol
-            error("m è vicino allo 0, cambia x0 e x1");
+        % Condizioni di arresto: se la soluzione non è variata
+        % significativamente dall'iterazione precedente o se l'immagine
+        % risulta abbastanza vicina a 0
+        if abs(x_new - x1) < tau * abs(x1) || abs(f(x_new)) < tau
+            xs = x_new;
+            return;
         end
 
-        x_new = x1 - f1 / m;
-        k = k + 1;
-
-        % Usa x1 al posto di xk
-        flag = (abs(x_new - x1) > abs(x1) * tol) && (k < kmax) && (abs(fun(x_new)) > tol);
+        % Aggiorno i punti
+        x0 = x1;
+        x1 = x_new;
     end
 
-    if k >= kmax
-        warning("Raggiunto kmax");
-        x = inf;
-    else
-        x = x_new;
-    end
+    % In caso esca dal ciclo significa che è stato raggiunto il numero
+    % massimo di iterazioni senza che il punto trovato abbia raggiunto una
+    % tolleranza accettabile
+    xs = x_new;
+    warning("Iterazioni massime raggiunte");
+   
 end
