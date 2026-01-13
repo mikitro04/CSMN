@@ -1,4 +1,4 @@
-function [x, k] = jacobi(A, b, x0, tau, k_max)
+function [x, k] = jacobi(A, b, tau, k_max)
 
     % jacobi: metodo per trovare un'approssimazione delle radici tramite 
     % iterazioni successive di un sistema di equazioni lineari
@@ -10,30 +10,15 @@ function [x, k] = jacobi(A, b, x0, tau, k_max)
         % tau = tolleranza
         % k_max = iterazioni massime
     
-    % Controllo del numero di parametri in input
-    if (nargin > 5)
-        error("Sono stati inseriti troppi parametri in input");
-    end
-    
     % Controllo che la matrice non sia singolare
     if (abs(det(A)) < 1e-12)
         error("Il sistema può non ammettere soluzioni");
     end
     
-    % Nel caso la funzione jacobi venga chiamata con meno parametri, allora
-    % imposto manualmente i parametri mancanti
-    if (nargin < 5)
-        k_max = 1000;
-    end
-    if (nargin < 4)
-        tau = 1e-14;
-    end
-    if (nargin < 3)
-        x0 = zeros(size(A, 1), 1);
-        x0(1) = 1;
-    end
     
-
+    x0 = zeros(size(A, 1), 1);
+    x0(1) = 1;
+    
     % A = D - E - F
     
     % diag() restituisce un vettore, quindi diag() su di esso mi rende una 

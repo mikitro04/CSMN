@@ -2,8 +2,9 @@ function [xc, kc] = corde(f, m, x0, tau, kmax)
     
     % corde: metodo per trovare un'approssimazione della radice di 
     % f(x) = 0 
-    %   [xc, kc] = corde(f, m, x0, tau, kmax) restituisce l'approssimazione
-    %   della radice e il numero di iterazioni effettuate.
+    %  [xc, kc] = corde(f, m, x0, tau, kmax) restituisce l'approssimazione
+    % m = fder(x0)
+    %  della radice e il numero di iterazioni effettuate.
 
     % Controllo che il punto iniziale sia già una radice
     if(abs(f(x0)) < tau)

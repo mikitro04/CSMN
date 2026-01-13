@@ -8,28 +8,11 @@ function [x, k] = gauss_seidel(A, b, x0, tau, k_max)
     % tau e k_max sono le condizioni d'arresto:
         % tau = tolleranza
         % k_max = iterazioni massime
-    
-    % Controllo del numero di parametri in input
-    if (nargin > 5)
-        error("Sono stati inseriti troppi parametri in input");
-    end
+        % x0 = vettore di grandezza size(A, 1) di numeri interi
     
     % Controllo che la matrice non sia singolare
     if (abs(det(A)) < 1e-12)
         error("Il sistema può non ammettere soluzioni");
-    end
-    
-    % Nel caso la funzione gauss_seidel venga chiamata con meno parametri, 
-    % allora imposto manualmente i parametri mancanti
-    if (nargin < 5)
-        k_max = 1000;
-    end
-    if (nargin < 4)
-        tau = 1e-14;
-    end
-    if (nargin < 3)
-        x0 = zeros(size(A, 1), 1);
-        x0(1) = 1;
     end
     
     % A = D - E - F
