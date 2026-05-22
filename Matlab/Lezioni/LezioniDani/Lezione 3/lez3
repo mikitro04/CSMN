@@ -1,0 +1,47 @@
+help rand
+ <strong>rand</strong> - Uniformly distributed random numbers
+    This MATLAB function returns a random scalar drawn from the uniform
+    distribution in the interval (0,1).
+
+    Syntax
+      X = <strong>rand</strong>
+      X = <strong>rand</strong>(n)
+      X = <strong>rand</strong>(sz1,...,szN)
+      X = <strong>rand</strong>(sz)
+
+      X = <strong>rand</strong>(___,typename)
+      X = <strong>rand</strong>(___,"like",p)
+
+      X = <strong>rand</strong>(s,___)
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/rand.html#buiavoq-1-n')">n</a> - Size of square matrix
+        integer value
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/rand.html#buiavoq-1-sz1szN')">sz1,...,szN</a> - Size of each dimension (as separate arguments)
+        integer values
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/rand.html#buiavoq-1-sz')">sz</a> - Size of each dimension (as a row vector)
+        integer values
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/rand.html#buiavoq-1-typename')">typename</a> - Data type (class) to create
+        "double" (default) | "single"
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/rand.html#buiavoq-1-p')">p</a> - Prototype of array to create
+        numeric array
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/rand.html#mw_7b3a095f-0290-4394-8a40-c09de8009e3e')">s</a> - Random number stream
+        RandStream object
+
+    Examples
+      <a href="matlab:openExample('matlab/MatrixofRandomNumbersExample')">Matrix of Random Numbers</a>
+      <a href="matlab:openExample('matlab/RandomNumbersWithinSpecifiedIntervalExample')">Random Numbers Within Specified Interval</a>
+      <a href="matlab:openExample('matlab/RandomIntegersExample')">Random Integers</a>
+      <a href="matlab:openExample('matlab/ResetRandomNumberGeneratorExample')">Reset Random Number Generator</a>
+      <a href="matlab:openExample('matlab/ThreeDArrayOfRandomNumbersExample')">3-D Array of Random Numbers</a>
+      <a href="matlab:openExample('matlab/SpecifyDataTypeofRandomNumbersExample')">Specify Data Type of Random Numbers</a>
+      <a href="matlab:openExample('matlab/CloneSizeFromExistingArrayrandExample')">Size Defined by Existing Array</a>
+      <a href="matlab:openExample('matlab/CloneSizeandDataTypefromExistingArrayExample')">Size and Data Type Defined by Existing Array</a>
+      <a href="matlab:openExample('matlab/RandomComplexNumbersExample')">Random Complex Numbers</a>
+
+    See also <a href="matlab:help randi -displayBanner">randi</a>, <a href="matlab:help randn -displayBanner">randn</a>, <a href="matlab:help rng -displayBanner">rng</a>, <a href="matlab:help RandStream -displayBanner">RandStream</a>, <a href="matlab:help sprand -displayBanner">sprand</a>, <a href="matlab:help sprandn -displayBanner">sprandn</a>, <a href="matlab:help randperm -displayBanner">randperm</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc rand">Documentation for rand</a>
+    <a href="matlab:matlab.lang.internal.introspective.overloads.displayOverloads('rand')">Other uses of rand</a>
+

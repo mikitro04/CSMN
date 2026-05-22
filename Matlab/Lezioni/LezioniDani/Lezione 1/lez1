@@ -1,0 +1,87 @@
+help save
+ <strong>save</strong> - Save variables from workspace to file
+    This MATLAB function saves all variables from the current workspace in a
+    binary MATLAB file (MAT-file) named filename.
+
+    Syntax
+      <strong>save</strong>(filename)
+      <strong>save</strong>(filename,variables)
+      <strong>save</strong>(filename,variables,fmt)
+
+      <strong>save</strong>(filename,variables,version)
+      <strong>save</strong>(filename,variables,version,"-nocompression")
+      <strong>save</strong>(filename,variables,"-append")
+      <strong>save</strong>(filename,variables,"-append","-nocompression")
+
+      <strong>save</strong> filename
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/save.html#btox10b-1-filename')">filename</a> - Name of file
+        "matlab.mat" (default) | string scalar | character vector
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/save.html#btox10b-1-variables')">variables</a> - Names of variables to save
+        string scalar | character vector
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/save.html#btox10b-1-fmt')">fmt</a> - File format
+        "-mat" (default) | "-ascii" | "-ascii","-tabs" |
+        "-ascii","-double" | "-ascii","-double","-tabs"
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/save.html#btox10b-1-version')">version</a> - MAT-file version
+        "-v7" (default) | "-v7.3" | "-v6" | "-v4"
+
+    Examples
+      <a href="matlab:openExample('matlab/SaveAllWorkspaceVariablesToMATFileExample')">Save All Workspace Variables to MAT-File</a>
+      <a href="matlab:openExample('matlab/SaveSpecificVariablestoMATFileExample')">Save Specific Variables to MAT-File</a>
+      <a href="matlab:openExample('matlab/SaveDataToASCIIFileExample')">Save Data to ASCII File</a>
+      <a href="matlab:openExample('matlab/SaveStructureFieldsasIndividualVariablesExample')">Save Structure Fields as Individual Variables</a>
+      <a href="matlab:openExample('matlab/SaveVariablesToVersion73MATFileExample')">Save Variables to Version 7.3 MAT-File</a>
+      <a href="matlab:openExample('matlab/SaveVariablesToVersion7p3MATFileWithoutCompressionExample')">Save Variables to MAT-File Without Compression</a>
+      <a href="matlab:openExample('matlab/AppendVariableToMATFileExample')">Append Variable to MAT-File</a>
+      <a href="matlab:openExample('matlab/AppendVariableToMATFileWithoutCompressionExample')">Append Variable to MAT-File Without Compression</a>
+      <a href="matlab:openExample('matlab/SaveOnlyVariablesThatAlreadyExistInFileExample')">Save Only Variables That Already Exist in File</a>
+
+    See also <a href="matlab:help clear -displayBanner">clear</a>, <a href="matlab:help hgsave -displayBanner">hgsave</a>, <a href="matlab:help load -displayBanner">load</a>, <a href="matlab:help matfile -displayBanner">matfile</a>, <a href="matlab:help regexp -displayBanner">regexp</a>, <a href="matlab:help saveas -displayBanner">saveas</a>, <a href="matlab:help whos -displayBanner">whos</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc save">Documentation for save</a>
+    <a href="matlab:matlab.lang.internal.introspective.overloads.displayOverloads('save')">Other uses of save</a>
+
+save("workspace_lab1")
+load('workspace_lab1.mat')
+clear stringa
+clear
+load("workspace_lab1")
+whos
+  Name         Size            Bytes  Class     Attributes
+
+  stringa      1x1               166  string              
+  x            1x1                 8  double              
+  y            1x1                 8  double              
+
+save workspace_lab1
+load('workspace_lab1.mat')
+save workspace_lab1
+whos x
+  Name      Size            Bytes  Class     Attributes
+
+  x         1x1                 8  double              
+
+clc
+Inserisci il valore di f: 7
+Inserisci il valore di f: 4
+Inserisci il valore di f: 5
+Nome del piatto:arancia
+Nome del piatto:d
+Nome del piatto:d
+Nome del piatto:d
+Nome del piatto:d
+Nome del piatto:d
+Nome del piatto:d
+Nome del piatto:Nome del piatto: arancia
+Nome del piatto: "arancia"
+Nome del piatto: riso
+Nome del piatto: pasta
+Nome del piatto: "riso"
+Nome del piatto: "pasta"
+Nome del piatto: "riso"
+Nome del piatto: ris
+Nome del piatto: ris
+Nome del piatto: riso
+Nome del piatto: arancia

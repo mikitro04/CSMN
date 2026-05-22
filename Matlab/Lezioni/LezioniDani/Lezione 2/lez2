@@ -1,0 +1,293 @@
+pi
+
+ans =
+
+    3.1416
+
+clear
+pi
+
+ans =
+
+    3.1416
+
+man format
+{Unrecognized function or variable 'man'.
+} 
+help format
+ <strong>format</strong> - Set output display format
+    This MATLAB function changes the output display format to the format
+    specified by style.
+
+    Syntax
+      <strong>format</strong>(style)
+
+      fmt = <strong>format</strong>
+      fmt = <strong>format</strong>(style)
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/format.html#btiwmh5-1-style')">style</a> - Format to apply
+        character vector | string scalar | DisplayFormatOptions object
+
+    Output Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/format.html#mw_3eb76f23-845a-4266-9320-19dbc1994756')">fmt</a> - Current display format
+        DisplayFormatOptions object
+
+    Examples
+      <a href="matlab:openExample('matlab/ChangeCurrentFormatExample')">Long Format</a>
+      <a href="matlab:openExample('matlab/DisplayValuesinDefaultandHexadecimalFormatExample')">Hexadecimal Format</a>
+      <a href="matlab:openExample('matlab/DifferenceBetweenShortandLongEngineeringNotationExample')">Short and Long Engineering Notation</a>
+      <a href="matlab:openExample('matlab/DisplayLargeDataRangeUsingshortgFormatExample')">Large Data Range Format</a>
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/format.html#mw_5f3d66eb-5e13-4517-8573-e60f3f48169c')">Reset Format to Default</a>
+      <a href="matlab:openExample('matlab/GetCurrentFormatExample')">Get Current Format</a>
+      <a href="matlab:openExample('matlab/SaveAndRestoreDisplayFormatExample')">Save and Restore Display Format</a>
+
+    See also <a href="matlab:help matlab.display.DisplayFormatOptions -displayBanner">DisplayFormatOptions</a>, <a href="matlab:help disp -displayBanner">disp</a>, <a href="matlab:help fprintf -displayBanner">fprintf</a>, <a href="matlab:help formattedDisplayText -displayBanner">formattedDisplayText</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc format">Documentation for format</a>
+
+format short
+pi
+
+ans =
+
+    3.1416
+
+format long
+pi
+
+ans =
+
+   3.141592653589793
+
+format long long
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('format')" style="font-weight:bold">format</a>
+Invalid format option long.
+} 
+format shorte
+pi
+
+ans =
+
+   3.1416e+00
+
+x = 0.0000012454874
+
+x =
+
+   1.2455e-06
+
+fix x
+
+ans =
+
+   120
+
+fix(x)
+
+ans =
+
+     0
+
+fix(pi)
+
+ans =
+
+     3
+
+ans == pi
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   0
+
+y = fix(pi)
+
+y =
+
+     3
+
+floor(pi)
+
+ans =
+
+     3
+
+ceil(pi)
+
+ans =
+
+     4
+
+round(pi)
+
+ans =
+
+     3
+
+exp()
+{Error using <a href="matlab:matlab.lang.internal.introspective.errorDocCallback('exp')" style="font-weight:bold">exp</a>
+Not enough input arguments.
+} 
+e
+{Unrecognized function or variable 'e'.
+} 
+exp(1)
+
+ans =
+
+   2.7183e+00
+
+format long
+exp(1)
+
+ans =
+
+   2.718281828459045
+
+round(pi, 4)
+
+ans =
+
+   3.141600000000000
+
+round(pi, 4);
+round(pi, 4)
+
+ans =
+
+   3.141600000000000
+
+x
+
+x =
+
+     1.245487400000000e-06
+
+format long
+x
+
+x =
+
+     1.245487400000000e-06
+
+format long g
+x
+
+x =
+
+             1.2454874e-06
+
+format short g
+x
+
+x =
+
+   1.2455e-06
+
+format long g
+round(x, 2, 'significant')
+
+ans =
+
+                   1.2e-06
+
+format long
+round(x, 2, 'significant')
+
+ans =
+
+     1.200000000000000e-06
+
+pi2 = round(pi, 10, 'significant')
+
+pi2 =
+
+   3.141592654000000
+
+pi - pi2
+
+ans =
+
+    -4.102069794953422e-10
+
+abs(pi-pi2)
+
+ans =
+
+     4.102069794953422e-10
+
+err_ass = ans
+
+err_ass =
+
+     4.102069794953422e-10
+
+err_rel = err_ass / abs(pi)
+
+err_rel =
+
+     1.305729369549590e-10
+
+clc
+clear
+clc
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbcont; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+ps
+{Unrecognized function or variable 'ps'.
+} 
+eps
+
+ans =
+
+     2.220446049250313e-16
+
+if system_dependent('IsDebugMode')==1, dbquit; end
+if system_dependent('IsDebugMode')==1, dbquit; end
+eps == ep
+
+ans =
+
+  <a href="matlab:helpPopup('logical')" style="font-weight:bold">logical</a>
+
+   1
+
+Primo numero: 3.14159265358979323846264338
+Secondo numero: 4.986274954037
+Terzo numero: 2.788182
+Primo numero: 3.14159265358979323846264338
+Secondo numero: 4.8374958
+Terzo numero: 5.2737494
+Primo numero: 3.14159265358979323846264338
+Secondo numero: 2.947382397374847
+Terzo numero: 6.737394874639
+Primo numero: 3.14159265358979323846264338
+Secondo numero: 3.4874363847
+Terzo numero: 3.8437362882747449392

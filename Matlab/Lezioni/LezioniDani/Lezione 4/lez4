@@ -1,0 +1,291 @@
+help tril
+ <strong>tril</strong> - Lower triangular part of matrix
+    This MATLAB function returns the lower triangular portion of matrix A.
+
+    Syntax
+      L = <strong>tril</strong>(A)
+      L = <strong>tril</strong>(A,k)
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/tril.html#d126e1894266')">A</a> - Input matrix
+        matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/tril.html#d126e1894318')">k</a> - Diagonals to include
+        0 (default) | scalar
+
+    Examples
+      <a href="matlab:openExample('matlab/ExtractLowerTriangularPortionsOfMatrixExample')">Extract Lower Triangular Portions of Matrix</a>
+
+    See also <a href="matlab:help diag -displayBanner">diag</a>, <a href="matlab:help triu -displayBanner">triu</a>, <a href="matlab:help istril -displayBanner">istril</a>, <a href="matlab:help bandwidth -displayBanner">bandwidth</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc tril">Documentation for tril</a>
+
+help 1
+1 not found.
+
+    <a href="matlab:docsearch 1">Search the documentation for 1</a>
+
+help \
+ \ Solve systems of linear equations Ax = B for x
+    This MATLAB function solves the system of linear equations A*x = B.
+
+    Syntax
+      x = A\B
+      x = <strong>mldivide</strong>(A,B)
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/double.mldivide.html#mw_b8923d43-9b0d-494b-9dd6-97428b8963bf')">A</a> - Operands
+        vectors | full matrices | sparse matrices
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/double.mldivide.html#mw_b8923d43-9b0d-494b-9dd6-97428b8963bf')">B</a> - Operands
+        vectors | full matrices | sparse matrices
+
+    Output Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/double.mldivide.html#btg5qam-x')">x</a> - Solution
+        vector | full matrix | sparse matrix
+
+    Examples
+      <a href="matlab:openExample('matlab/SystemofEquationsExample')">System of Equations</a>
+      <a href="matlab:openExample('matlab/LinearSystemwithSingularMatrixExample')">Linear System with Singular Matrix</a>
+      <a href="matlab:openExample('matlab/LeastSquaresSolutionofUnderdeterminedSystemExample')">Least-Squares Solution of Underdetermined System</a>
+      <a href="matlab:openExample('matlab/LinearSystemwithSparseMatrixExample')">Linear System with Sparse Matrix</a>
+
+    See also <a href="matlab:help mrdivide -displayBanner">mrdivide</a>, <a href="matlab:help ldivide -displayBanner">ldivide</a>, <a href="matlab:help rdivide -displayBanner">rdivide</a>, <a href="matlab:help inv -displayBanner">inv</a>, <a href="matlab:help pinv -displayBanner">pinv</a>, <a href="matlab:help chol -displayBanner">chol</a>, <a href="matlab:help lu -displayBanner">lu</a>, <a href="matlab:help qr -displayBanner">qr</a>, <a href="matlab:help ldl -displayBanner">ldl</a>,
+      <a href="matlab:help linsolve -displayBanner">linsolve</a>, <a href="matlab:help lsqminnorm -displayBanner">lsqminnorm</a>, <a href="matlab:help spparms -displayBanner">spparms</a>, <a href="matlab:help decomposition -displayBanner">decomposition</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc mldivide">Documentation for mldivide</a>
+    <a href="matlab:matlab.lang.internal.introspective.overloads.displayOverloads('mldivide')">Other uses of mldivide</a>
+
+help eig
+ <strong>eig</strong> - Eigenvalues and eigenvectors
+    This MATLAB function returns a column vector containing the eigenvalues
+    of square matrix A.
+
+    Syntax
+      e = <strong>eig</strong>(A)
+      [V,D] = <strong>eig</strong>(A)
+      [V,D,W] = <strong>eig</strong>(A)
+
+      e = <strong>eig</strong>(A,B)
+      [V,D] = <strong>eig</strong>(A,B)
+      [V,D,W] = <strong>eig</strong>(A,B)
+
+      [___] = <strong>eig</strong>(A,balanceOption)
+      [___] = <strong>eig</strong>(A,B,algorithm)
+
+      [___] = <strong>eig</strong>(___,outputForm)
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-A')">A</a> - Input matrix
+        square matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-B')">B</a> - Generalized eigenvalue problem input matrix
+        square matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-balanceOption')">balanceOption</a> - Balance option
+        "balance" (default) | "nobalance"
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-algorithm')">algorithm</a> - Generalized eigenvalue algorithm
+        "chol" (default) | "qz"
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-eigvalOption')">outputForm</a> - Output format of eigenvalues
+        "vector" | "matrix"
+
+    Output Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-e')">e</a> - Eigenvalues (returned as vector)
+        column vector
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-V')">V</a> - Right eigenvectors
+        square matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-D')">D</a> - Eigenvalues (returned as matrix)
+        diagonal matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eig.html#btgapg5-1-W')">W</a> - Left eigenvectors
+        square matrix
+
+    Examples
+      <a href="matlab:openExample('matlab/EigenvaluesofMatrixExample')">Eigenvalues of Matrix</a>
+      <a href="matlab:openExample('matlab/EigenvaluesandEigenvectorsofMatrixExample')">Eigenvalues and Eigenvectors of Matrix</a>
+      <a href="matlab:openExample('matlab/SortedEigenvaluesAndEigenvectorsExample')">Sorted Eigenvalues and Eigenvectors</a>
+      <a href="matlab:openExample('matlab/LeftEigenvectorsExample')">Left Eigenvectors</a>
+      <a href="matlab:openExample('matlab/EigenvaluesofNondiagonalizableDefectiveMatrixExample')">Eigenvalues of Nondiagonalizable (Defective) Matrix</a>
+      <a href="matlab:openExample('matlab/GeneralizedEigenvaluesExample')">Generalized Eigenvalues</a>
+      <a href="matlab:openExample('matlab/GeneralizedEigenvaluesUsingQZAlgorithmforBadlyConditioneExample')">Generalized Eigenvalues Using QZ Algorithm for Badly Conditioned Matrices</a>
+      <a href="matlab:openExample('matlab/GeneralizedEigenvaluesWhereOneMatrixisSingularExample')">Generalized Eigenvalues Where One Matrix Is Singular</a>
+
+    See also <a href="matlab:help eigs -displayBanner">eigs</a>, <a href="matlab:help polyeig -displayBanner">polyeig</a>, <a href="matlab:help balance -displayBanner">balance</a>, <a href="matlab:help condeig -displayBanner">condeig</a>, <a href="matlab:help cdf2rdf -displayBanner">cdf2rdf</a>, <a href="matlab:help hess -displayBanner">hess</a>, <a href="matlab:help schur -displayBanner">schur</a>, <a href="matlab:help qz -displayBanner">qz</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc eig">Documentation for eig</a>
+
+help eigs
+ <strong>eigs</strong> - Subset of eigenvalues and eigenvectors
+    This MATLAB function returns a vector of the six largest magnitude
+    eigenvalues of matrix A.
+
+    Syntax
+      d = <strong>eigs</strong>(A)
+      d = <strong>eigs</strong>(A,k)
+      d = <strong>eigs</strong>(A,k,sigma)
+      d = <strong>eigs</strong>(A,k,sigma,Name,Value)
+      d = <strong>eigs</strong>(A,k,sigma,opts)
+
+      d = <strong>eigs</strong>(A,B,___)
+
+      d = <strong>eigs</strong>(Afun,n,___)
+
+      [V,D] = <strong>eigs</strong>(___)
+      [V,D,flag] = <strong>eigs</strong>(___)
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-A')">A</a> - Input matrix
+        matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-B')">B</a> - Input matrix
+        matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-k')">k</a> - Number of eigenvalues to compute
+        scalar
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-sigma')">sigma</a> - Type of eigenvalues
+        'largestabs' (default) | 'smallestabs' | 'largestreal' |
+        'smallestreal' | 'bothendsreal' | 'largestimag' | 'smallestimag' |
+        'bothendsimag' | scalar
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-opts')">opts</a> - Options structure
+        structure
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-Afun')">Afun</a> - Matrix function
+        function handle
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-n')">n</a> - Size of square matrix represented by Afun
+        scalar
+
+    Name-Value Arguments
+      General Options
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e465933')">Tolerance</a> - Convergence tolerance
+          1e-14 (default) | positive real scalar
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e465959')">MaxIterations</a> - Maximum number of algorithm iterations
+          300 (default) | positive integer
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e465985')">SubspaceDimension</a> - Maximum size of Krylov subspace
+          max(2*k,20) (default) | nonnegative integer
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e466037')">StartVector</a> - Initial starting vector
+          random vector (default) | vector
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e466079')">FailureTreatment</a> - Treatment of nonconverged eigenvalues
+          'replacenan' (default) | 'keep' | 'drop'
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e466182')">Display</a> - Toggle for diagnostic information display
+          false or 0 (default) | true or 1
+
+      Options for Afun
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e466229')">IsFunctionSymmetric</a> - Symmetry of Afun matrix
+          true or 1 | false or 0
+
+      Options for generalized eigenvalue problem A*V = B*V*D
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e466288')">IsCholesky</a> - Cholesky decomposition toggle for B
+          true or 1 | false or 0
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e466348')">CholeskyPermutation</a> - Cholesky permutation vector
+          1:n (default) | vector
+        <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#d126e466394')">IsSymmetricDefinite</a> - Symmetric-positive-definiteness toggle for B
+          true or 1 | false or 0
+
+    Output Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-d')">d</a> - Eigenvalues
+        column vector
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-V')">V</a> - Eigenvectors
+        matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-D')">D</a> - Eigenvalue matrix
+        matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/eigs.html#bu2_q3e-flag')">flag</a> - Convergence flag
+        0 | 1
+
+    Examples
+      <a href="matlab:openExample('matlab/LargestEigenvaluesOfSparseMatrixExample')">Largest Eigenvalues of Sparse Matrix</a>
+      <a href="matlab:openExample('matlab/SmallestEigenvaluesOfSparseMatrixExample')">Smallest Eigenvalues of Sparse Matrix</a>
+      <a href="matlab:openExample('matlab/EigenvaluesUsingFunctionHandleExample')">Eigenvalues Using Function Handle</a>
+      <a href="matlab:openExample('matlab/TypesOfEigenvaluesExample')">Types of Eigenvalues</a>
+      <a href="matlab:openExample('matlab/DifferenceBetweenSaAndSmEigenvaluesExample')">Difference Between 'smallestabs' and 'smallestreal' Eigenvalues</a>
+      <a href="matlab:openExample('matlab/RepeatedEigenvaluesOfSymmetricPositiveDefiniteSparseMatrExample')">Sigma Value Near Eigenvalue</a>
+      <a href="matlab:openExample('matlab/EigenvaluesOfPermutedCholeskyFactorExample')">Eigenvalues of Permuted Cholesky Factor</a>
+
+    See also <a href="matlab:help eig -displayBanner">eig</a>, <a href="matlab:help svds -displayBanner">svds</a>, <a href="matlab:help cdf2rdf -displayBanner">cdf2rdf</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc eigs">Documentation for eigs</a>
+
+help plot
+ <strong>plot</strong> - 2-D line plot
+    This MATLAB function creates a 2-D line plot of the data in Y versus the
+    corresponding values in X.
+
+    Vector and Matrix Data
+      <strong>plot</strong>(X,Y)
+      <strong>plot</strong>(X,Y,LineSpec)
+      <strong>plot</strong>(X1,Y1,...,Xn,Yn)
+      <strong>plot</strong>(X1,Y1,LineSpec1,...,Xn,Yn,LineSpecn)
+      <strong>plot</strong>(Y)
+      <strong>plot</strong>(Y,LineSpec)
+
+    Table Data
+      <strong>plot</strong>(tbl,xvar,yvar)
+      <strong>plot</strong>(tbl,yvar)
+
+    Additional Options
+      <strong>plot</strong>(ax,___)
+      <strong>plot</strong>(___,Name,Value)
+      p = <strong>plot</strong>(___)
+
+    Input Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#mw_6748a9ec-33eb-483b-b8f1-919954dfae40')">X</a> - x-coordinates
+        scalar | vector | matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#mw_52c5aef5-9f3e-4d29-b95f-485d73104bec')">Y</a> - y-coordinates
+        scalar | vector | matrix
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_mw_3a76f056-2882-44d7-8e73-c695c0c54ca8')">LineSpec</a> - Line style, marker, and color
+        string scalar | character vector
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_mw_1f5b8358-45d8-4c4d-8a0d-17e2da07c841')">tbl</a> - Source table
+        table | timetable
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#mw_08d91519-e234-43ae-aad7-307c49ddde7f')">xvar</a> - Table variables containing x-coordinates
+        string array | character vector | cell array | pattern |
+        numeric scalar or vector | logical vector | vartype()
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#mw_a9274880-b52a-4c2d-a563-eabbbab54d81')">yvar</a> - Table variables containing y-coordinates
+        string array | character vector | cell array | pattern |
+        numeric scalar or vector | logical vector | vartype()
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot-ax')">ax</a> - Target axes
+        Axes object | PolarAxes object | GeographicAxes object
+
+    Name-Value Arguments
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot-Color')">Color</a> - Line color
+        [0 0.4470 0.7410] (default) | RGB triplet | hexadecimal color code |
+        "r" | "g" | "b" | ...
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_shared-LineStyle')">LineStyle</a> - Line style
+        "-" (default) | "--" | ":" | "-." | "none"
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_shared-LineWidth')">LineWidth</a> - Line width
+        0.5 (default) | positive value
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_shared-Marker')">Marker</a> - Marker symbol
+        "none" (default) | "o" | "+" | "*" | "." | ...
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_shared-MarkerIndices')">MarkerIndices</a> - Indices of data points at which to display markers
+        1:length(YData) (default) | vector of positive integers |
+        scalar positive integer
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_shared-MarkerEdgeColor')">MarkerEdgeColor</a> - Marker outline color
+        "auto" (default) | RGB triplet | hexadecimal color code | "r" |
+        "g" | "b" | ...
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_shared-MarkerFaceColor')">MarkerFaceColor</a> - Marker fill color
+        "none" (default) | "auto" | RGB triplet | hexadecimal color code |
+        "r" | "g" | "b" | ...
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot_sep_shared-MarkerSize')">MarkerSize</a> - Marker size
+        6 (default) | positive value
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot-DatetimeTickFormat')">DatetimeTickFormat</a> - Format for datetime tick labels
+        character vector | string
+      <a href="matlab:web('C:\Program Files\MATLAB\R2024b\help/matlab/ref/plot.html#btzitot-DurationTickFormat')">DurationTickFormat</a> - Format for duration tick labels
+        character vector | string
+
+    Examples
+      <a href="matlab:openExample('graphics/CreateLinePlotExample')">Create Line Plot</a>
+      <a href="matlab:openExample('graphics/PlotMultipleLinesExample')">Plot Multiple Lines</a>
+      <a href="matlab:openExample('graphics/CreateLinePlotFromMatrixExample')">Create Line Plot From Matrix</a>
+      <a href="matlab:openExample('graphics/SpecifyLineStyleExample')">Specify Line Style</a>
+      <a href="matlab:openExample('graphics/SpecifyLineStyleColorAndMarkerExample')">Specify Line Style, Color, and Marker</a>
+      <a href="matlab:openExample('graphics/DisplayMarkersAtSpecificDataPointsExample')">Display Markers at Specific Data Points</a>
+      <a href="matlab:openExample('graphics/SpecifyLineWidthMarkerSizeAndMarkerColorExample')">Specify Line Width, Marker Size, and Marker Color</a>
+      <a href="matlab:openExample('graphics/AddTitleAndAxisLabelsExample')">Add Title and Axis Labels</a>
+      <a href="matlab:openExample('matlab/SpecifyDurationTickFormatsExample')">Plot Durations and Specify Tick Format</a>
+      <a href="matlab:openExample('graphics/PlotTableDataExample')">Plot Coordinates from a Table</a>
+      <a href="matlab:openExample('graphics/PlotTableMutliVariablesExample')">Plot Multiple Table Variables on One Axis</a>
+      <a href="matlab:openExample('graphics/PlotSpecifyAxes19bExample')">Specify Axes for Line Plot</a>
+      <a href="matlab:openExample('graphics2/ChangeLinePropertiesUsingHandlesExample')">Modify Lines After Creation</a>
+      <a href="matlab:openExample('graphics/PlotCircleExample')">Plot Circle</a>
+
+    See also <a href="matlab:help title -displayBanner">title</a>, <a href="matlab:help xlabel -displayBanner">xlabel</a>, <a href="matlab:help ylabel -displayBanner">ylabel</a>, <a href="matlab:help xlim -displayBanner">xlim</a>, <a href="matlab:help ylim -displayBanner">ylim</a>, <a href="matlab:help legend -displayBanner">legend</a>, <a href="matlab:help hold -displayBanner">hold</a>, <a href="matlab:help gca -displayBanner">gca</a>, <a href="matlab:help yyaxis -displayBanner">yyaxis</a>,
+      <a href="matlab:help plot3 -displayBanner">plot3</a>, <a href="matlab:help loglog -displayBanner">loglog</a>, <a href="matlab:help matlab.graphics.chart.primitive.Line -displayBanner">Line</a>
+
+    Introduced in MATLAB before R2006a
+    <a href="matlab:doc plot">Documentation for plot</a>
+    <a href="matlab:matlab.lang.internal.introspective.overloads.displayOverloads('plot')">Other uses of plot</a>
+
